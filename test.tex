@@ -1,0 +1,63 @@
+\documentclass[a4paper,titlepage,fontsize=10pt]{jlreq}
+\usepackage{luatexja}
+\usepackage{luatexja-fontspec}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amscd}
+\usepackage{amsxtra}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{pgf}
+\usepackage{unicode-math}
+\setmathfont{XITS Math}
+\setmainfont[
+  UprightFont = Times New Roman,
+  ItalicFont  = Times New Roman Italic,
+  BoldFont    = Times New Roman Bold,
+  BoldItalicFont = Times New Roman Bold Italic
+]{Times New Roman}
+\setmainjfont[
+  UprightFont = MS Mincho,
+  BoldFont    = MS Gothic,
+]{MS Mincho}
+
+\usepackage[backend=biber,sorting=none]{biblatex}
+\addbibresource{test.bib}
+
+\usepackage[
+  top=15mm,
+  bottom=15mm,
+  left=20mm,
+  right=20mm,
+  includehead,
+  includefoot
+]{geometry}
+
+% \usepackage{showframe}
+
+\usepackage{fewerfloatpages}
+% float-only page を極力減らす設定
+\renewcommand{\floatpagefraction}{.8}
+\renewcommand{\textfraction}{.1}
+\renewcommand{\topfraction}{.9}
+\renewcommand{\bottomfraction}{.8}
+\renewcommand{\floatpagekeepfraction}{.9}
+
+\def\mathdefault#1{#1}
+
+\title{テスト}
+\author{kuma}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{kuma}
+qwertyuiopasdfghjklzxcvbnm \cite{kuma}
+
+\printbibliography[title=参考文献]
+
+\end{document}

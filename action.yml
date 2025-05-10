@@ -1,0 +1,11 @@
+name: "compile tex"
+description: "Compile a LaTeX document"
+inputs:
+  tex_file:
+    description: "fail name "
+    required: true
+runs:
+  using: "docker"
+  image: Dockerfile
+  args:
+    - ${{ inputs.tex_file }}
