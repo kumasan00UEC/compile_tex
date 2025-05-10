@@ -8,4 +8,5 @@ COPY ms/ /usr/share/fonts/truetype/
 RUN luaotfload-tool --update
 RUN echo "openout_any = a" >> /usr/local/texlive/2025/texmf.cnf
 RUN chmod +x /entrypoint.sh
+RUN echo ${PWD}
 ENTRYPOINT ["/entrypoint.sh"]
