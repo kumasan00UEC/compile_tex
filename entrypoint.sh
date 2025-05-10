@@ -1,6 +1,6 @@
 #!/bin/bash
 
-failename=$1
+filename=$1
 echo "Running $filename"
 lualatex $filename.tex -file-line-error -interaction=nonstopmode -halt-on-error
 biber $filename
